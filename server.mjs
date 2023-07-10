@@ -4,16 +4,13 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import pool from './server/config/database/db.js';
 import userRouter from './server/api/users/userRouter.js';
-import auth from './server/api/users/middleware/auth.js';
+
 dotenv.config();
 const app = express();
 const port = process.env.PORT ||80;
-// 
-// app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-// app.use("/user",auth, userRouter);
 app.use("/user", userRouter)
 app.use("/user/setNewPassword", userRouter);
 app.use("/user/ForNewPassword", userRouter);
