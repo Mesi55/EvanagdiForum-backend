@@ -61,6 +61,7 @@ let correctPassword = (req, res) => {
                   console.log(err);
                 } else {
                   console.log("email sent");
+                  console.log(OTP);
                 }
               });
             }

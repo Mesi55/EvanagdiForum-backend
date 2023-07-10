@@ -6,7 +6,7 @@ let OTP_confirming = (req, res) => {
   let emailDecoded = JWT.verify(EncrypedEmail, process.env.JWT_SECRET);
   let emailChecker = "SELECT user_email FROM registrations";
   let otpChecker = `SELECT user_OTP FROM registrations WHERE user_email = '${emailDecoded}'`;
-
+console.log(`otpChecker`, otpChecker);
   pool.query(emailChecker, (err, result, fields) => {
     if (err) {
       // console.log(err);
