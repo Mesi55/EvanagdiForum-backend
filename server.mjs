@@ -27,7 +27,7 @@ app.use('/questions/:id', userRouter)
  
 
 app.use(cors({
-  origin: 'hhttps://evangadi-forum-frontend.pages.dev',
+  origin: 'https://evangadiforum-frontend.pages.dev/',
 }));
   //? Start the server
   
