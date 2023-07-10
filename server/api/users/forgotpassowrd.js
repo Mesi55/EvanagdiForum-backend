@@ -31,7 +31,7 @@ let correctPassword = (req, res) => {
                 port: 465,
                 auth: {
                   user: process.env.EMAIL,
-                  pass: process.env.PASSWORD,
+                  pass: process.env.EAMIL_PASSWORD,
                 },
               });
               function generateOTP() {
