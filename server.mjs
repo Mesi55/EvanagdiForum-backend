@@ -7,8 +7,8 @@ import userRouter from './server/api/users/userRouter.js';
 import auth from './server/api/users/middleware/auth.js';
 dotenv.config();
 const app = express();
-const port = process.env.PORT ;
-// ||80
+const port = process.env.PORT ||80;
+// 
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -26,12 +26,12 @@ app.use('/questions/:id', userRouter)
 
  
 
-// app.use(cors({
-//   origin: 'https://evangadiforum-frontend.pages.dev/',
-// }));
+app.use(cors({
+  origin: 'https://evangadiforum-frontend.pages.dev/',
+}));
   //? Start the server
   
-app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
+app.listen(port,'0.0.0.0', () => console.log(`Server listening on port http://localhost:${port}`));
 // app.listen(port,'0.0.0.0', () => console.log(`Server listening on port http://localhost:${port}`));
 
 
