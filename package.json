@@ -2,13 +2,13 @@
   "name": "evangadforum",
   "version": "1.0.0",
   "description": "",
-  "main": "server.mjs",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"nodemon server.mjs\" \"npm run client\"",
+    "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
     "client": "npm start --prefix client",
-    "start": "node server.mjs"
+    "start": "node server.js"
   },
   "author": "mesay",
   "license": "ISC",
