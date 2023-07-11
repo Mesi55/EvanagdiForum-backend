@@ -28,8 +28,7 @@ let correctPassword = (req, res) => {
             function sendEmail() {
               let mailSender = nodemailer.createTransport({
                 service: "gmail",
-                port: 587,
-                secure: false,
+                port: 465,
                 auth: {
                   user: process.env.EMAIL,
                   pass: process.env.EAMIL_PASSWORD,
